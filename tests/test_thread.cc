@@ -40,7 +40,7 @@ void fun3() {
 int main() {
 	SYLAR_LOG_INFO(g_logger) << "thread test begin";
 	YAML::Node root = YAML::LoadFile(LOG_YAML_FILE);
-	sylar::Config::LoadFromYaml(rot);
+	sylar::Config::LoadFromYaml(root);
 	// sylar::Thread::ptr thr(new sylar::Thread(&fun1, "name_" + std::to_string(0)));
 	// thr->join();
 	std::vector<sylar::Thread::ptr> thrs;
