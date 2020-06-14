@@ -1,3 +1,4 @@
+#include "fiber.h"
 #include "util.h"
 #include "log.h"
 
@@ -11,8 +12,8 @@ pid_t GetThreadId() {
     return syscall(SYS_gettid);
 }
 
-uint32_t GetFiberId() {
-    return 0;
+uint64_t GetFiberId() {
+    return Fiber::GetFiberId();
 }
 
 void BackTrace(std::vector<std::string>& bt, int size, int skip) {

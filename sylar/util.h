@@ -13,7 +13,7 @@
 namespace sylar {
 
 pid_t GetThreadId();
-uint32_t GetFiberId();
+uint64_t GetFiberId();
 
 void BackTrace(std::vector<std::string>& bt, int size, int skip = 1);
 std::string BacktraceToString(int size, int skip = 2, const std::string& prefix = "");
